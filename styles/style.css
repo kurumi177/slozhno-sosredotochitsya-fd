@@ -262,6 +262,8 @@
 @media (width >= 768px) {
   .heading {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    position: relative;
+    inset-inline-start: calc(-1 * 20px);
   }
   .content-section {
     display: grid;
@@ -271,10 +273,6 @@
   .decorated-zone {
     min-height: 1024px;
     padding-inline: 20px;
-  }
-  .heading {
-    position: relative;
-    inset-inline-start: calc(-1 * 20px);
   }
   .header__theme-menu-list {
     margin-top: 20px;
@@ -360,12 +358,12 @@
     max-inline-size: 491px;
     min-block-size: auto;
   }
-
   .content-section {
     gap: 0;
   }
   .content-section__title {
     width: 314px;
+    max-width: none;
   }
 
   .causes .text-blocks {
@@ -374,8 +372,5 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
     align-items: baseline;
-  }
-  .content-section__title {
-    max-width: none;
   }
 }
