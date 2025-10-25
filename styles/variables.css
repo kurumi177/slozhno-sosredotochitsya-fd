@@ -10,3 +10,15 @@
   --main-gap: 10px;
   --content-margin: 40px;
 }
+
+@media (width >= 768px) {
+  :root{
+    --main-gap: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  :root{
+    --main-gap: 20px;
+  }
+}
