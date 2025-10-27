@@ -1,17 +1,3 @@
-@font-face {
-  font-family: "IBM Plex Mono";
-  src: url("../fonts/IBMPlexMono-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "IBM Plex Mono";
-  src: url("../fonts/IBMPlexMono-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
 .page {
   background-image: var(--page-background-image);
   background-size: cover;
@@ -59,17 +45,20 @@
   width: 70px;
 }
 
+.header__theme-menu-button_active {
+  border: 1px solid var(--nav-color);
+  pointer-events: none;
+}
+
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  border: 1px solid var(--nav-color);
+  border-color: rgba(255, 0, 112, 0.4);
 }
 
 .header__theme-menu-button:focus {
-  border-block-end-color: var(--accent-color);
   outline: none;
-}
-
-.header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid transparent;
+  border-block-end: 1px solid var(--nav-color);
 }
 
 .header__rec {
@@ -135,7 +124,6 @@
   line-height: var(--main-line-height);
   color: var(--main-bg-color);
   background-color: var(--accent-color);
-  min-block-size: 117px;
   max-inline-size: 355px;
   align-self: center;
   justify-self: end;
@@ -148,7 +136,6 @@
   gap: 50px;
   padding-inline: var(--main-gap);
   padding-block: var(--content-margin) 50px;
-  background-color: var(--main-bg-color);
 }
 
 .content-section__title {
@@ -171,23 +158,18 @@
   margin-top: 20px;
 }
 
+.text-block__title.regular {
+  font-weight: 400;
+}
+
 .text-block__title.position_bottom {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.text-block__subtitle {
-  background-color: var(--accent-color);
-  color: var(--main-bg-color);
-  font-family: "IBM Plex Mono";
-  font-weight: 400;
-  font-size: var(--main-text-size);
-  line-height: var(--main-line-height);
-  margin-top: 20px;
-}
-
-.text-block {
+.causes .text-blocks {
   display: grid;
+  gap: 20px;
 }
 
 .text-block__content {
@@ -205,16 +187,7 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.text-link:hover {
-  border-bottom: 1px solid var(--main-text-color);
-}
-
-.text-link:focus {
-  outline: 1px solid var(--main-text-color);
-}
-
 .gallery {
-  background-color: var(--main-bg-color);
   padding-inline: var(--main-gap);
   padding-block: 0 var(--content-margin);
 }
@@ -246,7 +219,6 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  background-color: var(--main-bg-color);
   grid-template-rows: 1fr;
 }
 
@@ -262,8 +234,7 @@
 @media (width >= 768px) {
   .heading {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    position: relative;
-    inset-inline-start: calc(-1 * 20px);
+    margin-left: -20px;
   }
   .content-section {
     display: grid;
@@ -278,10 +249,8 @@
     margin-top: 20px;
   }
   .header__description {
-    position: relative;
-    inset-block-start: calc(-1 * var(--main-gap));
     max-inline-size: 364px;
-    margin-block-start: 28px;
+    margin-bottom: 20px;
   }
   .content {
     padding-block: 60px 80px;
@@ -330,6 +299,8 @@
   }
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    color: #ffc2e6;
+    text-shadow: 2px 2px 0px #ff0070;
   }
 }
 
@@ -349,12 +320,7 @@
     min-height: 768px;
   }
 
-  .heading {
-    position: relative;
-    inset-inline-start: calc(-1 * var(--main-gap));
-  }
   .header__description {
-    max-block-size: 71px;
     max-inline-size: 491px;
     min-block-size: auto;
   }
@@ -362,15 +328,31 @@
     gap: 0;
   }
   .content-section__title {
-    width: 314px;
-    max-width: none;
+    max-width: 314px;
+    width: 100%;
   }
 
   .causes .text-blocks {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
     align-items: baseline;
+  }
+  .content-section__title {
+    margin-bottom: 20px;
+  }
+  .content-section.advice {
+    display: grid;
+    grid-template-columns: 1fr 2.06fr;
+    gap: 20px;
+  }
+  .content-section.why {
+    display: grid;
+    grid-template-columns: 1fr 2.06fr;
+    gap: 20px;
+  }
+  .footer__title {
+    color: #ffc2e6;
+    text-shadow: 2px 2px 0px #ff0070;
   }
 }

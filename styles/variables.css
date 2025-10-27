@@ -16,9 +16,3 @@
     --main-gap: 20px;
   }
 }
-
-@media (width >= 1024px) {
-  :root {
-    --main-gap: 20px;
-  }
-}
