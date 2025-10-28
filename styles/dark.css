@@ -4,6 +4,8 @@
   --main-text-color: #f1b2ce;
   --title-color: #db00ff;
   --nav-color: #ff0070;
+  --nav-color-hover: rgba(255, 0, 112, 0.4);
+  --nav-color-focus: #ff0070;
   --page-background-image: url("../images/cover-image-dark.png");
 }
 
@@ -12,9 +14,9 @@
 }
 
 .theme-dark .text-link:hover {
-  border-bottom: 1px solid #f1b2ce;
+  border-bottom: 1px solid var(--main-text-color);
 }
 
 .theme-dark .text-link:focus {
-  outline: 1px solid #f1b2ce;
+  outline: 1px solid var(--main-text-color);
 }
