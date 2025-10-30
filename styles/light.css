@@ -62,33 +62,4 @@
   .header__rec {
     display: none;
   }
-
-
-  .text-block__content,
-  .content-section__title,
-  .header__theme-menu-button,
-  .text-link,
-  .gallery__title,
-  .text-block__title,
-  .header__description {
-    color: var(--main-text-color);
-  }
-
-  
-  .gallery__title,
-  .text-block__title,
-  .header__description {
-    background-color: var(--accent-color); 
-  }
-
-
-  .heading,
-  .footer__title {
-    color: var(--title-color); 
-    text-shadow: 4px 4px 0 var(--accent-color);
-  }
-
-  .footer__title {
-    text-shadow: 2px 2px 0 var(--footer-shadow); 
-  }
 }
