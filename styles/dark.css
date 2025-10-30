@@ -2,6 +2,7 @@
   --accent-color: #ff0070;
   --main-bg-color: #000028;
   --main-text-color: #f1b2ce;
+  --main-title-color: #000028;
   --title-color: #db00ff;
   --nav-color: #ff0070;
   --nav-color-hover: rgba(255, 0, 112, 0.4);
@@ -24,11 +25,20 @@
   outline: 1px solid var(--link-focus);
 }
 
+.theme-dark .header__theme-menu-button {
+  color: var(--nav-color);
+}
+
+.theme-dark .content-section__title {
+  color: var(--accent-color) !important; /* FF0070 с приоритетом */
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --accent-color: #ff0070;
     --main-bg-color: #000028;
     --main-text-color: #f1b2ce;
+    --main-title-color: #000028;
     --title-color: #db00ff;
     --nav-color: #ff0070;
     --nav-color-hover: rgba(255, 0, 112, 0.4);
@@ -49,5 +59,13 @@
 
   .text-link:focus {
     outline: 1px solid var(--link-focus);
+  }
+
+  .header__theme-menu-button {
+    color: var(--nav-color);
+  }
+
+  .content-section__title {
+    color: var(--accent-color);
   }
 }

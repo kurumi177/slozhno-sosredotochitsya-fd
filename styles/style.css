@@ -135,7 +135,7 @@
   font-weight: 700;
   font-size: var(--main-text-size);
   line-height: var(--main-line-height);
-  color: var(--main-bg-color);
+  color: var(--main-title-color);
   background-color: var(--accent-color);
   max-inline-size: 355px;
   align-self: center;
@@ -162,7 +162,7 @@
 
 .text-block__title {
   background-color: var(--accent-color);
-  color: var(--main-bg-color);
+  color: var(--main-title-color);
   font-family: "IBM Plex Mono", monospace;
   font-weight: 700;
   font-size: var(--main-text-size);
@@ -217,7 +217,7 @@
   font-weight: 700;
   font-size: var(--main-text-size);
   line-height: var(--main-line-height);
-  color: var(--main-bg-color);
+  color: var(--main-title-color);
   margin-bottom: 10px;
 }
 
