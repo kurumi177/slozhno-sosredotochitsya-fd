@@ -127,7 +127,7 @@
   font-weight: 700;
   line-height: 82%;
   color: var(--title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--heading-shadow);
 }
 
 .header__description {
@@ -156,7 +156,7 @@
   font-weight: 700;
   font-size: var(--main-text-size);
   line-height: var(--main-line-height);
-  color: var(--accent-color);
+  color: var(--nav-color);
   margin-bottom: 20px;
 }
 
@@ -241,7 +241,7 @@
   font-size: 116px;
   line-height: 82%;
   color: var(--title-color);
-  text-shadow: 2px 2px 0 var(--footer-shadow);
+  text-shadow: 2px 2px 0 var(--heading-shadow);
 }
 
 @media (width >= 768px) {
